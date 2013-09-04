@@ -1,7 +1,7 @@
 #include <stdio.h>
 #define AREAS_SIZE 5
 
-int main( int argc, char *argsv[] )
+int main( int argc, char *argv[] )
 {
   // more sexy
   int areas[ AREAS_SIZE ] = {10, 2, 13, 19, 20};
