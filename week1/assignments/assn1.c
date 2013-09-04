@@ -23,4 +23,5 @@ int main( int argc, char *argsv[] )
   // {
   //   printf( "%d\n", areas[ counter ] );
   // }
+  return 0;
 }
