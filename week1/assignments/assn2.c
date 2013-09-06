@@ -3,14 +3,14 @@
 #include <string.h>
 #define INPUT_SIZE 10
 
-bool check_vowel( int arg )
+bool check_vowel( char arg )
 {
-  int a = 'a';
-  int e = 'e';
-  int i = 'i';
-  int o = 'o';
-  int u = 'u';
-  
+  char a = 'a';
+  char e = 'e';
+  char i = 'i';
+  char o = 'o';
+  char u = 'u';
+
   if( arg == a || arg == e || arg == i || arg == o || arg == u ){
     return 1;
   } else {
@@ -21,15 +21,14 @@ bool check_vowel( int arg )
 int main( int argc, char *argv[] )
 {
   char word[] = {};
-  char *quit = "exit";
-  
+  char quit[] = "exit";
+
   while( strncmp(word, quit, 4) )
   {
     puts( "Enter a word" );
-    
+
     fgets( word, INPUT_SIZE, stdin  );
-    // printf( "size of word, %ld\n", strlen(word) );
-    for( int i = 0; i <  strlen(word); i++ )
+    for( int i = 0; i <  strlen(word)-1; i++ )
     {
       if( check_vowel( word[i]) )
       {
@@ -40,6 +39,6 @@ int main( int argc, char *argv[] )
       }
     }
   }
-  
+
   return 0;
 }
